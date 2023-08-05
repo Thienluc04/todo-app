@@ -1,6 +1,6 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '@/app/store';
 import { Todo } from '@/models/todo';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 interface TodoState {
   list: Todo[];

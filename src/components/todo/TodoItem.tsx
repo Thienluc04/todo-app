@@ -1,9 +1,9 @@
-import { PropsWithChildren } from 'react';
-import { Checkbox } from '@/components/checkbox';
-import { Todo } from '@/models/todo';
 import { useAppDispatch, useAppSelector } from '@/app/hooks';
+import { Checkbox } from '@/components/checkbox';
+import { IconPencil, IconTrash } from '@/components/icons';
 import { selectListTodo, todoActions } from '@/features/todo/todoSlice';
-import { IconTrash, IconPencil } from '@/components/icons';
+import { Todo } from '@/models/todo';
+import { PropsWithChildren } from 'react';
 
 export interface TodoItemProps {
   item: Todo;

@@ -5,4 +5,4 @@ export interface Todo {
   status: StatusTodo;
 }
 
-export type StatusTodo = 'Incomplete' | 'Complete';
+export type StatusTodo = 'Incomplete' | 'Complete' | 'All';

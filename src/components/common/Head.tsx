@@ -1,9 +1,10 @@
 import { useAppDispatch, useAppSelector } from '@/app/hooks';
+import { Button } from '@/components/button';
 import { selectListTodo, todoActions } from '@/features/todo/todoSlice';
 import { Todo } from '@/models/todo';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/button';
+import { Option, Select } from '.';
 
 export interface HeadProps {
   setListTodo: (list: Todo[]) => void;
@@ -72,15 +73,15 @@ export function Head({ setListTodo, onAddTask, onToggleDarkMode, isDarkMode }: H
         >
           {t('Add Task')}
         </Button>
-        <select
+        <Select
           name="filterTodo"
           onChange={(e) => handleFilterTodo(e.target.value)}
           className="flex items-center h-10 px-3 bg-gray-200 rounded-lg cursor-pointer dark:dark:bg-slate-800 dark:text-slate-300"
         >
-          <option value="All">{t('All')}</option>
-          <option value="Incomplete">{t('Incomplete')}</option>
-          <option value="Complete">{t('Complete')}</option>
-        </select>
+          <Option value="All">{t('All')}</Option>
+          <Option value="Incomplete">{t('Incomplete')}</Option>
+          <Option value="Complete">{t('Complete')}</Option>
+        </Select>
       </div>
     </>
   );
