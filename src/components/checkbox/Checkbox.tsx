@@ -1,4 +1,4 @@
-import { StatusTodo } from '../../models/todo';
+import { StatusTodo } from '@/models/todo';
 
 export interface CheckboxProps {
   status: StatusTodo;

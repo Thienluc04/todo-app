@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { RootState } from '../../app/store';
-import { Todo } from '../../models/todo';
+import { RootState } from '@/app/store';
+import { Todo } from '@/models/todo';
 
 interface TodoState {
   list: Todo[];
@@ -20,6 +20,7 @@ const todoSlice = createSlice({
     removeTodo(state, action: PayloadAction<string>) {
       state.list = state.list.filter((item) => item.id !== action.payload);
     },
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     updateTodo(_state, _action: PayloadAction<Todo>) {},
     setListTodo(state, action: PayloadAction<Todo[]>) {
       state.list = action.payload;

@@ -1,6 +1,6 @@
 import { put, select, takeEvery } from 'redux-saga/effects';
 import { selectListTodo, todoActions } from './todoSlice';
-import { Todo } from '../../models/todo';
+import { Todo } from '@/models/todo';
 import { PayloadAction } from '@reduxjs/toolkit';
 
 function* hanldeUpdateTodo({ payload }: PayloadAction<Todo>) {

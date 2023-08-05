@@ -1,7 +1,7 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './rootSaga';
-import todoReducer from '../features/todo/todoSlice';
+import todoReducer from '@/features/todo/todoSlice';
 
 const rootReducer = combineReducers({
   todo: todoReducer,
