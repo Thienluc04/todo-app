@@ -20,7 +20,7 @@ const todoSlice = createSlice({
     removeTodo(state, action: PayloadAction<string>) {
       state.list = state.list.filter((item) => item.id !== action.payload);
     },
-    updateTodo(state, action: PayloadAction<Todo>) {},
+    updateTodo(_state, _action: PayloadAction<Todo>) {},
     setListTodo(state, action: PayloadAction<Todo[]>) {
       state.list = action.payload;
     },
