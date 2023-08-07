@@ -1,13 +1,13 @@
-import { useEffect, useState, useRef } from 'react';
-import './App.scss';
-import { StatusTodo, Todo } from '@/models/todo';
-import { Model } from '@/components/model';
-import { useTranslation, initReactI18next } from 'react-i18next';
-import i18n from 'i18next';
-import { TodoItem, TodoList } from '@/components/todo';
-import { selectListTodo } from '@/features/todo/todoSlice';
 import { useAppSelector } from '@/app/hooks';
 import { Head } from '@/components/common';
+import { Model } from '@/components/model';
+import { TodoItem, TodoList } from '@/components/todo';
+import { selectListTodo } from '@/features/todo/todoSlice';
+import { StatusTodo, Todo } from '@/models/todo';
+import i18n from 'i18next';
+import { useEffect, useRef, useState } from 'react';
+import { initReactI18next, useTranslation } from 'react-i18next';
+import './App.scss';
 
 i18n.use(initReactI18next).init({
   resources: {
