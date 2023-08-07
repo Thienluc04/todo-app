@@ -1,6 +1,5 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import createSagaMiddleware from 'redux-saga';
-import rootSaga from './rootSaga';
 import todoReducer from '@/features/todo/todoSlice';
 
 const rootReducer = combineReducers({
@@ -13,7 +12,7 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleware),
 });
 
-sagaMiddleware.run(rootSaga);
+// sagaMiddleware.run(rootSaga);
 
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;

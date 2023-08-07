@@ -20,8 +20,18 @@ const todoSlice = createSlice({
     removeTodo(state, action: PayloadAction<string>) {
       state.list = state.list.filter((item) => item.id !== action.payload);
     },
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    updateTodo(_state, _action: PayloadAction<Todo>) {},
+    updateTodo(state, action: PayloadAction<Todo>) {
+      const newList: Todo[] = state.list.map((item) => {
+        if (item.id === action.payload.id) {
+          return {
+            ...action.payload,
+          };
+        }
+        return item;
+      });
+
+      state.list = newList;
+    },
     setListTodo(state, action: PayloadAction<Todo[]>) {
       state.list = action.payload;
     },

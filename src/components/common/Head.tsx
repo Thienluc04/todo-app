@@ -14,8 +14,9 @@ export interface HeadProps {
 }
 
 export function Head({ setListTodo, onAddTask, onToggleDarkMode, isDarkMode }: HeadProps) {
-  const currentTodoList = useAppSelector(selectListTodo);
   const dispatch = useAppDispatch();
+
+  const currentTodoList = useAppSelector(selectListTodo);
 
   useEffect(() => {
     if (currentTodoList.length > 0) {
